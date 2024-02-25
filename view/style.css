@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+#info
+{
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+
+
+
+.chat
+{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#main
+{
+    background-image: url('background.png');
+    height: 100%;
+    width: 100%; 
+}
+
+#state
+{
+    width: 100%;
+    bottom: 20px;
+}
+
+#send
+{
+    all: unset;
+    cursor: pointer;
+    width:140px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: greenyellow;
+}
+#message
+{
+    border-radius: 5px;
+    width: 85%;
+}
