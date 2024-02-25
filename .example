@@ -1,7 +1,7 @@
-DATABASE_NAME =
-DATABASE_USER = 
-DATABASE_PASSWORD = 
-DATABASE_HOST = 
-DATABASE_ENGINE = 
+DATABASE_NAME = yourdatabasename
+DATABASE_USER = yourusername
+DATABASE_PASSWORD = yourpassworddatabase
+DATABASE_HOST = yourdatabasehost
+DATABASE_ENGINE = yourdatabseengine
 
 
