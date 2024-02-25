@@ -1,0 +1,2 @@
+   npm install   kleur marked  mysql2 lodash sequelize --save
+   

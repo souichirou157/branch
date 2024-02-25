@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1 id="username" >{{username}}</h1>
+<header id ="info">
+    <h2 id = "counter">{{count}}</h2>
+    <h2><a  v-on:click="showData" href="http://localhost:4400/api/user" >{{move}}</a></h2>
+</header>
+
+<body id = "main">
+
+    <main id = "context">
+        <ul id = "log">
+           <li v-for=" msg in outputMessage">
+            {{ msg }}
+           </li>
+        </ul>
+    </main>
+    
+    
+    <div id = "state" class = "chat">
+        <form action="">
+            <input id="message" type="text" v-model="message">
+            <input id ="send" type="button" :value="text" v-on:click="sendMessage">
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.js"></script>
+    <script src = "index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
