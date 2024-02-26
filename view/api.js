@@ -17,7 +17,9 @@ app.get("/api/user",(req,res)=>
     const html = response.data;
     const $loadData = cheerio.load(html);
     tag=  $loadData('img').attr('src');
-    tagSrc = [{url:tag}];res.send(tagSrc);
+    tagSrc = [{url:tag}];
+    res.send(tagSrc);
+    console.log(tagSrc);
     }).catch(console.error);
     
 });
