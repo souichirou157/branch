@@ -12,7 +12,7 @@ app.get("/api/user",(req,res)=>
   let imgdata;
 
     //variable url the last url you want to use
-    axios.get('https://www.irasutoya.com/').then(response =>
+    axios.get(url).then(response =>
     {
         const html = response.data;
         const $loadData = cheerio.load(html); //
