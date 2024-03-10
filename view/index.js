@@ -1,6 +1,4 @@
 
-
-
 const app = Vue.createApp({
 
     data()
@@ -8,9 +6,8 @@ const app = Vue.createApp({
         return {
             username: '投稿待ち',
             text:'メッセージを送信',
-            message:'',
+            jsonData:'',
             move:'データを見に行く',
-            outputMessage:[],
             count:0,
         }
     }
@@ -19,14 +16,21 @@ const app = Vue.createApp({
     {
         sendMessage() 
         {
+            //http://localhost:4400/api/user
 
-            this.outputMessage.push(this.message);
-            this.message = '';
+            const obj = document.querySelector('#obj');
+            const li = document.createElement('li');
+
+            
+
             if(this.sendMessage)
             {
                 this.count++;
-                this.username = '投稿されました....';
+                this.username = '読み込み中....';
                 setTimeout(()=>{
+                    li.innerText = this.jsonData;
+                    obj.appendChild(li);
+                    this.jsonData = '';
                  this.username = '投稿待ち';},6000);
             }
         }

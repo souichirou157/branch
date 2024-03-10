@@ -15,22 +15,29 @@
 <body id = "main">
 
     <main id = "context">
-        <ul id = "log">
-           <li v-for=" msg in outputMessage">
-            {{ msg }}
-           </li>
-        </ul>
+        <ol id = "obj">
+            {{ data }}
+         </ol>
+    
     </main>
     
     
     <div id = "state" class = "chat">
-        <form action="/api/user">
-            <input id="message" type="text" v-model="message">
+        <form action="/api/user" id = "form">
+            <input id="message" type="text" v-model="jsonData" name = "imgdata">
             <input id ="send" type="button" :value="text" v-on:click="sendMessage">
         </form>
     </div>
     <script src="https://unpkg.com/vue@3.4.19/dist/vue.global.js"></script>
     <script src = "index.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+  
 </body>
 </html>
+
+
+
+
+
+
+
